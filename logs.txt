@@ -1,0 +1,11 @@
+commit 135dd8cf5bed86833a5da0ee425f421d63642e6f
+Author: Evgenija Arsova <evgenija.arsova@students.finki.ukim.mk>
+Date:   Sun Apr 14 11:51:59 2024 +0200
+
+    Add starter code
+
+commit a550a3dbccd9768c1d2ac782290e4044f198abff
+Author: Evgenija Arsova <evgenija.arsova@students.finki.ukim.mk>
+Date:   Sun Apr 14 11:48:24 2024 +0200
+
+    Initial commit

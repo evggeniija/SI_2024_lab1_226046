@@ -1,0 +1,130 @@
+evgenija@evgenija-nb MINGW64 ~
+$ cd Desktop/
+
+=> со командата cd влегувам во фолдерот со име Desktop
+
+evgenija@evgenija-nb MINGW64 ~/Desktop
+$ mkdir SI_2024_lab1_226046
+
+=> со командата mkdir создавам директориум со име SI_2024_lab1_226046
+
+evgenija@evgenija-nb MINGW64 ~/Desktop
+$ cd SI_2024_lab1_226046
+
+=> со командата cd влегувам во фолдерот со име SI_2024_lab1_226046
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046
+$ git init
+Initialized empty Git repository in C:/Users/evgenija/Desktop/SI_2024_lab1_22604
+6/.git/
+
+=>Со командата git init се иницијализира празен Гит репозиториум, така што 
+Гит-метаподатоците се чуваат во наведената патека
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ git remote add origin https://github.com/evggeniija/SI_2024_lab1_226046.git
+
+=>Со командата git remote add origin се поврзува локалниот репозиториум со 
+одалечениот репозиториум
+   
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ nano README.md
+
+=>Со командата nano се создава датотека, во случајов создавам датотека со име
+README.md
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java
+
+=> со командата ls се наведуваат сите постоечки датотеки во моменталниот
+директориум
+(ова го правам за да видам дали добро сум ги вметнала датотеките
+SILab1Main.java, SILab1_1.java, SILab1_2.java, зашто ги внесував рачно преку 
+file manager со cut-paste)
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the nex
+t time Git touches it
+
+=> со оваа команда (git add) се додава датотека во staged, 
+моментално тоа е датотеката README.md 
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 9ad4faa] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+=> со командата  git commit -m "Initial commit" ги комитнуваме сите датотеки 
+моментално во фаза staged  со порака "Initial commit", во случајов тоа е само датотеката 
+README.md
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ git add SILab1Main.java SILab1_1.java SILab1_2.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF t
+he next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the
+ next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the
+ next time Git touches it
+
+=>Овде повторно со команда git add повторно додаваме датотеки во фаза staged, 
+овојпат тоа се датотеките SILab1Main.java, SILab1_1.java, SILab1_2.java
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ git commit -m "Add starter code"
+[master 16bdc40] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+=> со командата git commit -m "Add starter code", правиме комит на датотеки
+коишто се веќе во фаза staged со порака "Add starter code", во овој случај тоа 
+се датотеките SILab1Main.java, SILab1_1.java, SILab1_2.java
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ git push -u origin master
+branch 'master' set up to track 'origin/master'.
+Everything up-to-date
+
+=>со командата git push -u origin master правиме синхронизација на локалниот
+со оддалечениот репозиториум
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ git log
+commit 135dd8cf5bed86833a5da0ee425f421d63642e6f (HEAD -> master, origin/master)
+Author: Evgenija Arsova <evgenija.arsova@students.finki.ukim.mk>
+Date:   Sun Apr 14 11:51:59 2024 +0200
+
+    Add starter code
+
+commit a550a3dbccd9768c1d2ac782290e4044f198abff
+Author: Evgenija Arsova <evgenija.arsova@students.finki.ukim.mk>
+Date:   Sun Apr 14 11:48:24 2024 +0200
+
+    Initial commit
+
+=> командата git log ни ги претставува сите досега направени комити
+
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ git log >> logs.txt
+
+=>со наведената команда го насочувам соодветниот output од командата git log 
+да се запише во датотека со име logs.txt
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ ls
+README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java  logs.txt
+
+=> со листирање проверувам дали е соодветно извршена минатата команда
+
+
+evgenija@evgenija-nb MINGW64 ~/Desktop/SI_2024_lab1_226046 (master)
+$ ls
+226046.txt  README.md  SILab1Main.java  SILab1_1.java  SILab1_2.java  logs.txt
+
+=> со оваа команда проверувам дали рачно додадената датотека е успешно дел од моменталниот диреториум
